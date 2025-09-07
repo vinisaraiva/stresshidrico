@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: stresshidrico
+    runtime: python
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run APP.PY --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+
